@@ -6,9 +6,9 @@ const BackToTop = () => {
   };
 
   return (
-    <a href="#" onClick={scrollToTop} id="back-to-top" className="back-to-top rounded fs-5">
-      <i data-feather="arrow-up" className="fea icon-sm align-middle"></i>
-    </a>
+    <>
+    <a href="/" onClick="topFunction()" id="back-to-top" className="back-to-top rounded fs-5"><i data-feather="arrow-up" className="fea icon-sm align-middle"></i></a>
+    </>
   );
 };
 
