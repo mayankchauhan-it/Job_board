@@ -1,22 +1,23 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header'; // Import the Header component
-import MainContent from './components/MainContent'; // Import the MainContent component
-import Footer from './components/Footer'; // Import the Footer component
-import BackToTop from './components/BackToTop'; // Import the BackToTop component
-import SecondDiv from './components/second_div'; // Import the second_div component
-import ThirdDiv from './components/third_section'; // Import the Footer component
+import Index_page from './webpages/Index_page'; // Import the index_page component
+import About_us_page from './webpages/About_us_page';
+import Contact_us_page from './webpages/Contact_us_page';
+import Jobs_categories from './webpages/jobs_categories';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+
 
 function App() {
   return (
-    <>
-      <Header />  {/* Add Header component */}
-      <MainContent />  {/* Add MainContent component */}
-      <SecondDiv />  {/* Add second_div component */}
-      <ThirdDiv />  {/* Add third_section component */}
-      <BackToTop />  {/* Add MainContent component */}
-      <Footer />  {/* Add Footer component */}
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Index_page />} />
+        <Route path="/aboutus" element={<About_us_page />} />
+        <Route path="/contactus" element={<Contact_us_page />} />
+        <Route path="/job_category" element={<Jobs_categories />} />
+      </Routes>
+    </Router>
   );
 }
 
